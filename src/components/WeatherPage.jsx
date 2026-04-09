@@ -11,7 +11,7 @@ const WeatherPage = () => {
     const [isLoading,setIsLoading]=useState(false)
 
     // API key
-    const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+    const apiKey = 'ef468e4b77aec430026655bf80abb2f8';
     const curWeatherUrl='https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}'
     const foreCastDayUrl='https://api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}'
     // fetch data from 2 APIs
@@ -80,11 +80,13 @@ const WeatherPage = () => {
             )
         }
         {/* pass forecast data as prop only if it is not null */}
-        <div className="forecast-container">
-        {
-            forecastData&&forecastData.list.map((foreccastObj,index)=><ForecastDay day={foreccastObj} city={city} key={index}/>)
-        }
-        </div>
+        {forecastData && (
+          <div className="forecast-container">
+          {
+              forecastData.list.map((foreccastObj,index)=><ForecastDay day={foreccastObj} city={city} key={index}/>)
+          }
+          </div>
+        )}
     </div>
   )
 }
