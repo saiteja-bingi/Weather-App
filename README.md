@@ -40,6 +40,10 @@ This application provides real-time weather data and a 5-day forecast with a cin
 
 ---
 
+## 🌐 Live Demo
+
+🚀 [View Live App](https://weather-app-rosy-seven-69.vercel.app/)
+
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
